@@ -1,0 +1,138 @@
+.navbar {
+  background: #1c2237;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease;
+  font-family: "Sora", sans-serif;
+  z-index: 2;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.nav-menu ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  margin-right: 0.5rem;
+}
+
+.nav-links {
+  color: #d8d7d7;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  color: #777474;
+}
+
+.menu-icon {
+  display: none;
+}
+
+#scrim {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    background: #273a81;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 0;
+    height: 100vh;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    width: 60vw;
+    height: 100vh;
+    box-shadow: 0 0 15px 0 #000;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu ul {
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  #scrim.visible {
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s ease;
+  }
+}

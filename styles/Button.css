@@ -1,0 +1,41 @@
+.btn-medium {
+    padding: 8px 20px;
+    font-size: 18px;
+}
+
+.btn--large {
+    padding: 12px 26px;
+    font-size: 20px;
+}
+
+.btn--mobile {
+    text-align: center;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: 24px;
+    font-size: 24px;
+    background-color: red; /*transparent; */
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solor #fff;
+    transition: all 0.3s ease-out;
+}
+
+.btn--wide {
+    padding: 12px 64px;
+    font-size: 20px;
+}
+
+.btn--large:hover, 
+.btn--medium:hover, 
+.btn--moble:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+}
+
+.btn--wide:hover {
+    color: #fff;
+    background-color: #f00946;
+    transition: all 0.2s ease-out;
+}
