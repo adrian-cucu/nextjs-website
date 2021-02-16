@@ -31,9 +31,10 @@ export default function Meta() {
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} key="ogImage" /> */}
-      <meta name="msapplication-TileColor" content="#1c2237" />
-      <meta name="theme-color" content="#000" />
-      <meta name="viewport" content="width=500, initial-scale=1"></meta>
+      <meta name="msapplication-TileColor" content="#000000" />
+      <meta name="theme-color" content="#1c2237" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
       <meta
         name="description"
         content={`A statically generated blog example using Next.js and Sanity.io}.`}
