@@ -1,19 +1,14 @@
-/* .main-article {
-  font-size: 1rem;
-  line-height: 1.1;
-} */
-
-.main-article a {
-  text-decoration: none;
-  font-weight: 600;
-  border-bottom: 3px solid #b9cdfb;
+.main-article {
+  padding-bottom: 0.5rem;
 }
+
 
 /* ------ main article header ------ */
 .main-article-header {
   padding: 0.5rem;
 }
 
+/* ------ main article header -> title ------ */
 .main-article-header .post-title {
   font-weight: 700;
   font-size: 1.8rem;
@@ -21,10 +16,9 @@
   line-height: 1.1;
 }
 
-.main-article-header .post-date time {
-  font-size: 0.95rem;
-  color: #777;
-}
+/* .main-article-header .post-date time {
+  color: ;
+} */
 
 .main-article-header .post-image {
   align-items: center;
@@ -41,7 +35,6 @@
 .main-article-header .post-author {
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
 }
 
 .main-article-header .post-author .author-avatar {
@@ -61,7 +54,6 @@
 }
 
 .main-article-header .post-author h4 {
-  /* font-size: 1.2rem; */
   margin: 0;
 }
 
@@ -73,16 +65,26 @@
 }
 
 .main-article-header .post-tags h6 {
-  display: block;
+  display: inline;
   font-weight: 500;
-  background: #e4e6e8;
-  margin: 0.5rem;
+  background: var(--light-background-hover);
+  margin: 0.25rem 0.5rem 0.25rem 0;
   padding: 0.5rem 0.5rem;
-  font-size: 0.9rem;
-  border-radius: 0.3rem;
+  border-radius: 0.25rem;
   white-space: nowrap;
-  line-height: 1;
+  line-height: 1.1;
   font-weight: bold;
+  color: var(--font-color);
+  font-size: 0.9rem;
+}
+
+/* ------ main article header -> meta ------ */
+.main-article-header .post-meta {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--light-font-color);
 }
 
 /* ------ main article body ------ */
@@ -91,6 +93,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .main-article-header .post-meta {
+    font-size: 1rem;
+  }
   .main-article-header .post-title {
     font-size: 2.5rem;
   }
@@ -100,13 +105,19 @@
 }
 
 @media screen and (min-width: 992px) {
+  .main-article-header .post-meta {
+    font-size: 1.1rem;
+  }
   .main-article-body {
     font-size: 1.35rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .main-article-header .post-meta {
+    font-size: 1.2rem;
+  }
   .main-article-body {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }

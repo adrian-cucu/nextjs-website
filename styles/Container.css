@@ -1,11 +1,11 @@
 .container-root {
-  background: #d1d1d1;
+  background: var(--background);
   width: 100%;
   min-height: 960px;
 }
 
 .container {
-  background: #f6f6f6;
+  background: var(--light-background);
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
@@ -26,11 +26,11 @@ Min-width: 1200px (large devices and wide screens)
 @media screen and (min-width: 768px) {}
 @media screen and (min-width: 992px) {}
 @media screen and (min-width: 1200px) {}
-
 */
+
 @media screen and (min-width: 560px) {
   .container {
-    padding: 0.5rem;
+    padding: .75rem;
   }
 }
 

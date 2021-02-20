@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { BiCodeCurly } from 'react-icons/bi'
 import { IconContext } from 'react-icons/lib'
+import Toggle from '../components/Toggle'
 
 export default function Navbar() {
   const [click, setClick] = useState(false)
@@ -18,17 +19,42 @@ export default function Navbar() {
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ size: '2rem' }}>
         <div className="navbar">
           <div className="navbar-container">
-            {/* <Link href="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <BiCodeCurly className="navbar-icon" />
-              Dev
-            </Link> */}
+            <div className="nav-brand">
+              <Link href="/" className="brand" onClick={closeMobileMenu}>
+                <a className="brand">
+                  <span>
+                    <BiCodeCurly
+                      className="navbar-icon"
+                      style={{ fontSize: '2rem', display: 'block' }}
+                    />
+                  </span>
+                  Adrian Cucu
+                </a>
+              </Link>
+            </div>
 
             {/* Hamburger Icon */}
             <div className="menu-icon" onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
+              {click ? (
+                <FaTimes
+                  style={{
+                    fontSize: '2rem',
+                    display: 'inline-block',
+                    margin: 'auto',
+                  }}
+                />
+              ) : (
+                <FaBars
+                  style={{
+                    fontSize: '2rem',
+                    display: 'inline-block',
+                    margin: 'auto',
+                  }}
+                />
+              )}
             </div>
 
             <div
@@ -65,6 +91,7 @@ export default function Navbar() {
                   </Link>
                 </li>
               </ul>
+              <Toggle />
             </div>
           </div>
         </div>

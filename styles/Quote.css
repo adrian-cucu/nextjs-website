@@ -2,7 +2,20 @@ code.quote-custom {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
     sans-serif;
-  background: #e4e6e8;
-  border-radius: 3px;
-  padding: 0 0.25rem;
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  font-weight: 400;
+  background: var(--blockquote-background);
+}
+
+.blockquote-custom {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace,
+    sans-serif;
+  padding: 1.25em;
+  font-weight: 400;
+  border-radius: 0.3rem;
+  margin: 2rem 0;
+  background: var(--blockquote-background);
+  border-left: 3px solid var(--link-color);
 }
