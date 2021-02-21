@@ -5,19 +5,7 @@ export default function Toggle() {
   const [theme, setTheme] = useState('light')
 
   const changeTheme = (mode) => {
-    if (mode === 'dark') {
-      const head = document.getElementsByTagName('head')[0]
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.id = 'dark-mode'
-      link.href = '/dark.css'
-      head.appendChild(link)
-    } else {
-      const link = document.querySelectorAll('#dark-mode')
-      if (link) {
-        link.forEach((el) => el.remove())
-      }
-    }
+    document.body.className = mode;
     typeof window !== 'undefined' && window.localStorage.setItem('theme', mode)
     setTheme(mode)
   }
