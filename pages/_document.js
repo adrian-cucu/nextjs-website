@@ -4,58 +4,35 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-        </Head>
-        <body>
-        <script
+        <Head></Head>
+        <body className="light">
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 (function() {
-                    var storageKey = 'theme';
-                    var classNameDark = 'dark';
-                    var classNameLight = 'light';
-                  
-                    function setClassOnDocumentBody(inputTheme) {
-                        if (inputTheme === classNameDark) {
-                            document.body.classList.add(classNameDark);
-                            document.body.classList.remove(classNameLight); 
-                        } else {
-                            document.body.classList.add(classNameLight);
-                            document.body.classList.remove(classNameDark); 
-                        }
-                    //   document.body.classList.add(darkMode ? classNameDark : classNameLight);
-                    //   document.body.classList.remove(darkMode ? classNameLight : classNameDark);
+                    window.__onThemeChange = function() {};
+                    function setTheme(newTheme) {
+                      console.log(newTheme)
+                      window.__theme = newTheme;
+                      preferredTheme = newTheme;
+                      document.body.className = newTheme;
+                      window.__onThemeChange(newTheme);
                     }
-                    
-                    var preferDarkQuery = '(prefers-color-scheme: dark)';
-                    var mql = window.matchMedia(preferDarkQuery);
-                    var supportsColorSchemeQuery = mql.media === preferDarkQuery;
-                    var localStorageTheme = null;
+                    var preferredTheme;
                     try {
-                      localStorageTheme = localStorage.getItem(storageKey);
-                    } catch (err) {}
-                    setClassOnDocumentBody(localStorageTheme);
-                    
-                    // var localStorageExists = localStorageTheme !== null;
-                    // if (localStorageExists) {
-                    //   localStorageTheme = JSON.parse(localStorageTheme);
-                    // }
-
-                    // console.log(localStorageTheme)
-                  
-                    // // Determine the source of truth
-                    // if (localStorageExists) {
-                    //   // source of truth from localStorage
-                    //   setClassOnDocumentBody(localStorageTheme);
-                    // } else if (supportsColorSchemeQuery) {
-                    //   // source of truth from system
-                    //   setClassOnDocumentBody(mql.matches);
-                    //   localStorage.setItem(storageKey, mql.matches);
-                    // } else {
-                    //   // source of truth from document.body
-                    //   var isDarkMode = document.body.classList.contains(classNameDark);
-                    //   localStorage.setItem(storageKey, JSON.stringify(isDarkMode));
-                    // }
+                      preferredTheme = localStorage.getItem('theme');
+                    } catch (err) { }
+                    window.__setPreferredTheme = function(newTheme) {
+                      setTheme(newTheme);
+                      try {
+                        localStorage.setItem('theme', newTheme);
+                      } catch (err) {}
+                    }
+                    var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                    darkQuery.addListener(function(e) {
+                      window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+                    });
+                    setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
                 })()
             `,
             }}
