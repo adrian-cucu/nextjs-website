@@ -128,3 +128,28 @@ h5 {
   background: #3b5bdb;
   color: #fff;
 }
+
+/**
+ * Based on copypasta from Remy Bach and Sarah Drasner
+ */
+code[class*='language-'],
+pre[class*='language-'] {
+  color: white;
+  /* background: red; */
+  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-feature-settings: normal;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+  tab-size: 4;
+  hyphens: 'none';
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+}
