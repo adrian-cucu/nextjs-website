@@ -134,7 +134,7 @@ h5 {
  */
 code[class*='language-'],
 pre[class*='language-'] {
-  color: white;
+  color: #cacbce;
   /* background: red; */
   font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
   font-feature-settings: normal;
@@ -144,6 +144,7 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
+  margin-top: 0;
   margin-bottom: 0;
   tab-size: 4;
   hyphens: 'none';
