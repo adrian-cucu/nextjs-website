@@ -1,4 +1,4 @@
-:root {
+body.light {
   --font-color: #495057; /* used at html, h3, h4 */
   --heading-color: #343a40; /* headings tag */
   --background: silver; /* used at body, .container-root tag */
@@ -20,6 +20,30 @@
   /* --code-font-family: Menlo, 'Roboto Mono', Courier New, monospace; */
 }
 
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --font-color: #bec0c5;
+  --heading-color: #ffd479;
+  --dark-font-color: #ced4da;
+  --background: #1f2022;
+  /* --medium-font-color: #dee2e6; */
+  --light-font-color: #868e96;
+  --light-background: #2d2d31;
+  --light-background-hover: #3b3b3e;
+  --code-background-color: #2e2e30;
+  --border: #404040;
+  --link-color: #6ab0f3;
+  --link-color-darker: #4a72a5;
+  --link-hover-color: #e1a6f2;
+  --navbar-color: #1d1d1d;
+  --navbar-font-color: #d8d8d8;
+  --footer-color: #1d1d1d;
+  --blockquote-background: #56616d;
+  /* --transparent-text: rgba(255, 255, 255, 0.7); */
+  /* --transparent-bg: rgba(0, 0, 0, 0.2); */
+  /* --light-transparent-bg: rgba(255, 255, 255, 0.05); */
+}
+
 /* Reset */
 *,
 *::before,
@@ -39,6 +63,7 @@ html {
 
 body {
   background: var(--background);
+  color: var(--font-color);
   margin: 0;
   padding: 0;
 }
@@ -121,8 +146,6 @@ h5 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-
-
 
 ::selection {
   background: #3b5bdb;
