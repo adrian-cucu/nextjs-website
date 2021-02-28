@@ -1,4 +1,4 @@
-import { urlForImage } from '../sanity/util'
+import { urlForImage } from '../lib/sanity/util'
 
 export default function Avatar({ name, picture }) {
   return (

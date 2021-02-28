@@ -1,5 +1,5 @@
 import Avatar from '../components/Avatar'
-import { urlForImage, parseDate } from '../sanity/util'
+import { urlForImage, parseDate } from '../lib/sanity/util'
 
 export default function PostHeader({ title, coverImage, date, author, tags }) {
   return (
