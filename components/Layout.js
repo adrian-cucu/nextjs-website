@@ -7,10 +7,8 @@ export default function Layout({ preview, children }) {
     <>
       <Meta />
       <Navbar />
-      <div className="container-root">
-        <div className="container">
-          <main>{children}</main>
-        </div>
+      <div className="main-container">
+        <main>{children}</main>
       </div>
       <Footer />
     </>

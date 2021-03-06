@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import PostHeader from '../../components/PostHeader'
 import PostBody from '../../components/PostBody'
+import Container from '../../components/Container'
 
 export default function Post(props) {
   const router = useRouter()
@@ -23,8 +24,8 @@ export default function Post(props) {
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
-        <>
-          <article className="main-article">
+        <article className="main-article">
+          <Container>
             <Head>
               <title>{post.title} | Next.js Blog Example</title>
               {post.mainImage && (
@@ -50,8 +51,8 @@ export default function Post(props) {
               tags={post.categories}
             />
             <PostBody content={post.body} />
-          </article>
-        </>
+          </Container>
+        </article>
       )}
     </Layout>
   )

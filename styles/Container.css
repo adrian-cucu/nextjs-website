@@ -1,56 +1,48 @@
-.container-root {
-  background: var(--background);
-  width: 100%;
-  min-height: 960px;
-}
+/*
+  Min-width: 320px (smaller phone viewpoints)
+  Min-width: 480px (small devices and most phones)
+  Min-width: 560px (small devices and most phones)
+  Min-width: 768px (most tablets)
+  Min-width: 992px (smaller desktop viewpoints)
+  Min-width: 1200px (large devices and wide screens)
+
+  @media screen and (min-width: 320px) {}
+  @media screen and (min-width: 480px) {}
+  @media screen and (min-width: 560px) {}
+  @media screen and (min-width: 768px) {}
+  @media screen and (min-width: 992px) {}
+  @media screen and (min-width: 1200px) {}
+*/
 
 .container {
-  background: var(--light-background);
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
-  padding: 0.5rem;
+  padding: 0 1rem;
 }
-
-/*
-Min-width: 320px (smaller phone viewpoints)
-Min-width: 480px (small devices and most phones)
-Min-width: 560px (small devices and most phones)
-Min-width: 768px (most tablets)
-Min-width: 992px (smaller desktop viewpoints)
-Min-width: 1200px (large devices and wide screens)
-
-@media screen and (min-width: 320px) {}
-@media screen and (min-width: 480px) {}
-@media screen and (min-width: 560px) {}
-@media screen and (min-width: 768px) {}
-@media screen and (min-width: 992px) {}
-@media screen and (min-width: 1200px) {}
-*/
 
 @media screen and (min-width: 560px) {
   .container {
-    padding: .75rem;
+    padding: 0 1.25rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding: 1rem;
+    padding: 0 1.5rem;
   }
 }
 
 @media screen and (min-width: 992px) {
   .container {
     max-width: 992px;
-    padding: 1.5rem;
+    padding: 0 2rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    padding: 2.5rem;
+    padding: 0 2.5rem;
   }
 }

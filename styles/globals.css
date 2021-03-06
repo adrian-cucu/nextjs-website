@@ -2,6 +2,7 @@ body.light {
   --font-color: #495057; /* used at html, h3, h4 */
   --heading-color: #343a40; /* headings tag */
   --background: silver; /* used at body, .container-root tag */
+  --dark-background: #c0c0c0;
   --dark-font-color: #1b1d25;
   /* --medium-font-color: #60656c; */
   --light-font-color: #afadad;
@@ -26,6 +27,7 @@ body.dark {
   --heading-color: #ffd479;
   --dark-font-color: #ced4da;
   --background: #1f2022;
+  --dark-background: #a8a8a8;
   /* --medium-font-color: #dee2e6; */
   --light-font-color: #868e96;
   --light-background: #2d2d31;
@@ -76,8 +78,66 @@ a {
   cursor: pointer;
 }
 
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+menu,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+u,
 ul,
-li {
+var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
   list-style-type: none;
 }
 
@@ -158,7 +218,6 @@ h5 {
 code[class*='language-'],
 pre[class*='language-'] {
   color: #cacbce;
-  /* background: red; */
   font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
   font-feature-settings: normal;
   text-align: left;
@@ -167,8 +226,6 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
-  margin-top: 0;
-  margin-bottom: 0;
   tab-size: 4;
   hyphens: 'none';
   -webkit-hyphens: none;
@@ -176,4 +233,19 @@ pre[class*='language-'] {
   -ms-hyphens: none;
   -moz-tab-size: 4;
   -o-tab-size: 4;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.main-container {
+  background: var(--background);
+  width: 100%;
+  min-height: 960px;
 }

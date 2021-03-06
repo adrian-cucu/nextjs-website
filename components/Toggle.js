@@ -5,7 +5,7 @@ export default function Toggle() {
   const [theme, setTheme] = useState('light')
 
   const changeTheme = (mode) => {
-    document.body.className = mode;
+    document.body.className = mode
     typeof window !== 'undefined' && window.localStorage.setItem('theme', mode)
     setTheme(mode)
   }
@@ -20,66 +20,61 @@ export default function Toggle() {
     changeTheme(localTheme ? localTheme : 'light')
   }, [])
 
-  const themeSwitcherStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '1.2rem',
-  }
-
   const buttonStyle = {
-    border: '2px solid grey',
-    borderRadius: '20px',
-    cursor: 'pointer',
+    position: 'relative',
+    width: '4rem',
+    padding: '0.5rem 0.75rem',
     display: 'flex',
-    fontSize: '1.5rem',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: '0 auto',
+    backgroundColor: 'var(--dark-background)',
     overflow: 'hidden',
-    padding: '0.7rem',
-    position: 'relative',
-    width: '8rem',
     outline: 'none',
-    height: '2.5rem',
-    backgroundColor: '#35a900',
+    border: 'none',
+    borderRadius: '2rem',
+    boxSizing: 'content-box',
+    cursor: 'pointer',
+    fontSize: '1.1rem',
   }
 
   const themeIconsStyle = {
     zIndex: 1,
     color: '#eee',
-    transition: '.25s ease-in ',
+    transition: '.3s ease-in ',
   }
 
   const currentThemeSwitch = {
     position: 'absolute',
-    transition: 'left .25s ease,background-color .25s',
+    transition: 'left .3s ease,background-color .3s',
     top: 0,
     left: 0,
     backgroundColor: '#445',
     width: '50%',
-    height: '2.5rem',
+    height: '100%',
   }
 
   return (
-    <div className="theme-switcher" style={themeSwitcherStyle}>
+    <div className="theme-switcher">
       <button style={buttonStyle} onClick={toggleTheme}>
         <FaMoon
-          style={{ ...themeIconsStyle, opacity: theme === 'dark' ? 1 : 0.5 }}
+          style={{
+            ...themeIconsStyle,
+            color: theme === 'dark' ? '#eee' : '#000',
+            opacity: theme === 'dark' ? 1 : 0.4,
+          }}
         />
         <FaSun
           style={{
             ...themeIconsStyle,
-            opacity: theme === 'light' ? 1 : 0.5,
-            color: theme === 'light' ? 'fff700' : '#eee',
+            color: '#ffeb00',
+            opacity: theme === 'light' ? 1 : 0.4,
           }}
         />
         <div
           className="current-theme-switch"
           style={{
             ...currentThemeSwitch,
-            left: theme === 'light' ? 'calc(100% - 50%)' : 0,
+            left: theme === 'light' ? 'calc(50%)' : 0,
             backgroundColor: theme === 'light' ? '#00007d' : '#323235',
           }}
         ></div>

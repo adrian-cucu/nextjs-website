@@ -1,24 +1,19 @@
 .main-article {
   padding-bottom: 0.5rem;
+  background: var(--light-background);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
 }
 
-
-/* ------ main article header ------ */
 .main-article-header {
-  padding: 0.5rem;
+  padding: 2.5rem 0;
 }
 
-/* ------ main article header -> title ------ */
 .main-article-header .post-title {
   font-weight: 700;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   line-height: 1.1;
 }
-
-/* .main-article-header .post-date time {
-  color: ;
-} */
 
 .main-article-header .post-image {
   align-items: center;
@@ -78,7 +73,6 @@
   font-size: 0.9rem;
 }
 
-/* ------ main article header -> meta ------ */
 .main-article-header .post-meta {
   margin-top: 1.5rem;
   padding: 1rem 0;
@@ -87,9 +81,9 @@
   color: var(--light-font-color);
 }
 
-/* ------ main article body ------ */
 .main-article-body {
   font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 768px) {

@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@iconify/icons-logos": "^1.1.8",
+    "@iconify/icons-mdi": "^1.1.11",
+    "@iconify/react": "^1.1.4",
     "@sanity/block-content-to-react": "^2.0.7",
     "next": "10.0.6",
     "next-compose-plugins": "^2.2.1",
