@@ -4,11 +4,9 @@ import docco from 'react-syntax-highlighter/dist/cjs/styles/hljs/docco'
 
 function CustomPreTag({ children, _language }) {
   return (
-    <div className="pre-code-wrapper">
-      <div
-        style={{ position: 'relative', minHeight: '2.5rem', marginTop: '2rem' }}
-      >
-        <div className="pre-language">{_language}</div>
+    <div className="code-wrapper">
+      <div className="code-lang-wrapper">
+        <span className="code-lang">{_language}</span>
       </div>
       <pre className={'hljs language-' + _language}>{children}</pre>
     </div>
