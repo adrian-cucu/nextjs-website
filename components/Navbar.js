@@ -17,14 +17,20 @@ export default function Navbar() {
         setClick(false)
       }
     }
+
     window.addEventListener('resize', updateSize)
-    return () => window.removeEventListener('resize', updateSize)
+
+    return () => {
+      window.removeEventListener('resize', updateSize)
+      document.body.style.overflow = ''
+    }
   }, [])
 
   const handleClick = () => {
-    setClick(!click)
+    setClick((prevClick) => !prevClick)
     document.body.style.overflow = 'hidden'
   }
+
   const closeMobileMenu = () => {
     setClick(false)
     document.body.style.overflow = ''
