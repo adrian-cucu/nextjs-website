@@ -88,14 +88,17 @@
 }
 
 #nav-scrim {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   opacity: 0;
   background: rgb(0, 0, 0, 0.5);
-  display: none;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity .5s linear;
 }
 
 @media screen and (min-width: 320px) {
@@ -141,21 +144,19 @@
     background: var(--navbar-color);
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: -100%;
     width: 0;
-    height: 100vh;
-    transition: all 1s ease;
+    height: 100%;
+    transition: left 0.5s linear, width 0.5s linear;
   }
 
   .nav-menu.active {
     left: 0;
     width: 60vw;
-    height: 100vh;
     box-shadow: 0 0 15px 0 #000;
-    transition: all 0.5s ease;
   }
 
   .nav-menu ul {
@@ -186,18 +187,7 @@
   }
 
   #nav-scrim.visible {
-    display: block;
+    visibility: visible;
     opacity: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transition: opacity 0.5s;
-  }
-
-  .theme-switcher {
-    margin-bottom: 1rem;
   }
 }
