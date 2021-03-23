@@ -6,11 +6,15 @@ export default function PostHeader({ title, coverImage, date, author, tags }) {
     <header className="main-article-header">
       <h1 className="post-title">{title}</h1>
       <div className="post-meta">
-        <div className="post-image">
-          <img src={urlForImage(coverImage).url()} />
-        </div>
+        {coverImage && (
+          <div className="post-image">
+            <img src={urlForImage(coverImage).url()} />
+          </div>
+        )}
         <div className="post-author">
-          {/* <Avatar name={author.name} picture={author.picture} /> */}
+          {/* {author.picture && (
+            <Avatar name={author.name} picture={author.picture} />
+          )} */}
           <div className="post-author-wrap">
             <h4>{author.name}</h4>
             <div className="post-date">

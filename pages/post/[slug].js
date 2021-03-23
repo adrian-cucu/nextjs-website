@@ -12,8 +12,8 @@ import Container from '../../components/Container'
 export default function Post(props) {
   const router = useRouter()
 
-  const slug = props?.data?.post?.slug?.current
   const post = props?.data?.post
+  const slug = post?.slug?.current
 
   if (!router.isFallback && !slug && !post) {
     return <ErrorPage statusCode={404} />
@@ -42,11 +42,11 @@ export default function Post(props) {
             </Head>
             <PostHeader
               title={post.title}
-              coverImage={post.mainImage.asset}
+              coverImage={post.mainImage?.asset}
               date={post._createdAt}
               author={{
                 name: post.authorName,
-                picture: post.authorImage.asset,
+                picture: post.authorImage?.asset,
               }}
               tags={post.categories}
             />
