@@ -2,12 +2,12 @@ import { sanityClient } from '../../lib/sanity/client'
 import { postQuery, postSlugsQuery } from '../../lib/sanity/queries'
 import { urlForImage } from '../../lib/sanity/util'
 import Layout from '../../components/Layout'
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import PostHeader from '../../components/PostHeader'
 import PostBody from '../../components/PostBody'
 import Container from '../../components/Container'
+import SEO from '../../components/SEO'
 
 export default function Post(props) {
   const router = useRouter()
@@ -26,20 +26,16 @@ export default function Post(props) {
       ) : (
         <article className="main-article">
           <Container>
-            <Head>
-              <title>{post.title} | Next.js Blog Example</title>
-              {post.mainImage && (
-                <meta
-                  key="ogImage"
-                  property="og:image"
-                  content={urlForImage(post.mainImage)
-                    .width(1200)
-                    .height(627)
-                    .fit('crop')
-                    .url()}
-                />
-              )}
-            </Head>
+            <SEO
+              description={post.description}
+              image={urlForImage(post.mainImage)
+                .width(1200)
+                .height(627)
+                .fit('crop')
+                .url()}
+              url={`/posts/${slug}`}
+              title={post.title}
+            />
             <PostHeader
               title={post.title}
               coverImage={post.mainImage.asset}
