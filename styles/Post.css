@@ -1,7 +1,7 @@
 .main-article {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background: var(--light-background);
+  background: var(--bg-color-light);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
 }
 
@@ -20,7 +20,7 @@
   padding: 1rem 0;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--font-color);
+  color: var(--font-color-light);
 }
 
 .post-image {
@@ -65,7 +65,7 @@
 .post-tags h6 {
   display: inline;
   font-weight: 500;
-  background: var(--light-background-hover);
+  background: var(--bg-color-transparent-light);
   margin: 0.25rem 0.5rem 0.25rem 0;
   padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
@@ -74,6 +74,10 @@
   font-weight: bold;
   color: var(--font-color);
   font-size: 0.9rem;
+}
+
+.post-tags h6:hover {
+  color: var(--link-color-hover);
 }
 
 .main-article-body {
@@ -130,8 +134,7 @@
 
 .post a:hover,
 .post a[aria-current='page'] {
-  background: var(--light-background);
-  color: var(--font-color);
+  background: var(--bg-color-light-hover);
   border-radius: 0.5rem;
 }
 
@@ -155,13 +158,14 @@
   font-weight: 400;
   white-space: nowrap;
   color: var(--font-color);
-  background: var(--light-background);
+  background: var(--bg-color-transparent-light);
   padding: 0.5rem;
   border-radius: 0.5rem;
+  line-height: 1;
 }
 
 .section-view-all:hover,
 .section-view-all [aria-current='page'] {
-  background: var(--light-background-hover);
-  color: var(--font-color);
+  background: var(--bg-color-light-hover);
+  color: var(--link-color);
 }

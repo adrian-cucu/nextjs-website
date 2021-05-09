@@ -5,7 +5,7 @@ code.quote-custom {
   border-radius: 0.3rem;
   padding: 0 0.5rem;
   font-weight: 400;
-  background: var(--blockquote-background);
+  background: var(--bg-color-transparent-light);
 }
 
 .blockquote-custom {
@@ -16,6 +16,6 @@ code.quote-custom {
   font-weight: 400;
   border-radius: 0.3rem;
   margin: 2rem 0;
-  background: var(--blockquote-background);
+  background: var(--bg-color-light-hover);
   border-left: 3px solid var(--link-color);
 }

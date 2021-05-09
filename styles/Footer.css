@@ -10,7 +10,7 @@
 }
 
 .tech-icon path {
-  fill: var(--light-font-color);
+  fill: var(--font-color-light);
 }
 
 .social-media-wrap {

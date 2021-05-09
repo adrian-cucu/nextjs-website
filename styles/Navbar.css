@@ -26,8 +26,8 @@
 
 .navbar a:hover,
 .navbar a[aria-current='page'] {
-  background: var(--light-background);
-  color: var(--dark-font-color);
+  background: var(--bg-color-light);
+  color: var(--font-color-dark);
   border-radius: 0.5rem;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .navbar a.brand:hover {
-  background: var(--light-background) !important;
+  background: var(--bg-color-light) !important;
 }
 
 .nav-brand {
