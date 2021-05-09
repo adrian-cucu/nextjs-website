@@ -141,6 +141,11 @@ var {
   list-style-type: none;
 }
 
+time {
+  font-family: DejaVu Sans Mono, monospace;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
 /* @media screen and (min-width: 800px) {
   section > h2 {
     margin-bottom: 2rem;
@@ -233,15 +238,6 @@ pre[class*='language-'] {
   -ms-hyphens: none;
   -moz-tab-size: 4;
   -o-tab-size: 4;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .main-container {

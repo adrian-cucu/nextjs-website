@@ -4,14 +4,9 @@
   font-size: 1.4rem;
 }
 
-.tech-used {
-  flex-wrap: wrap;
-}
-
 .tech-icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 1rem;
+  margin: 0.5em;
+  font-size: 1.5rem;
 }
 
 .tech-icon path {
@@ -19,14 +14,14 @@
 }
 
 .social-media-wrap {
-  flex-wrap: wrap;
   border-bottom: 1px solid #fff;
   padding: 1rem 0;
 }
 
 .social-icon-link {
   color: #fff;
-  margin: 0 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
   font-weight: 400;
   font-size: 1.75rem;
 }
@@ -37,7 +32,6 @@
 }
 
 .website-rights small {
-  flex-wrap: wrap;
   min-width: 0;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -46,4 +40,5 @@
   padding: 1rem 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+  text-align: center;
 }

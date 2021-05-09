@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FaLinkedin, FaGithub, FaBitbucket } from 'react-icons/fa'
-import { Icon, InlineIcon } from '@iconify/react/dist/icon'
+import { InlineIcon } from '@iconify/react/dist/icon'
 import reactIcon from '@iconify/icons-logos/react'
 import sanityIcon from '@iconify/icons-logos/sanity'
 import nextjsIcon from '@iconify/icons-logos/nextjs-icon'
@@ -28,36 +28,22 @@ export default function Footer() {
   return (
     <div className="footer">
       <Container>
-        <section className="tech-used flex justify-center">
-          <Icon
-            icon={nextjsIcon}
-            className="tech-icon"
-            width="2rem"
-            height="2rem"
-          />
-          <Icon
-            icon={sanityIcon}
-            className="tech-icon"
-            width="5rem"
-            height="5rem"
-          />
-          <InlineIcon
-            icon={reactIcon}
-            className="tech-icon"
-            width="2rem"
-            height="2rem"
-          />
+        <section className="tech-used flex-wrap-center jc-center">
+          <InlineIcon icon={nextjsIcon} className="tech-icon" align="center" />
+          <InlineIcon icon={sanityIcon} className="tech-icon" align="center" />
+          <InlineIcon icon={reactIcon} className="tech-icon" align="center" />
         </section>
-        <section className="social-media flex justify-center">
-          <div className="social-media-wrap flex justify-center">
+        <section className="social-media flex-center">
+          <div className="social-media-wrap flex-wrap-center jc-center">
             {SOCIAL_PAGES &&
               SOCIAL_PAGES.map((elem, idx) => {
                 return (
                   <Link passHref href={elem.linkto} key={idx}>
                     <a
-                      className="social-icon-link"
+                      className="social-icon-link flex-center"
                       target="_blank"
                       aria-label={elem.label}
+                      rel="noopener noreferrer"
                     >
                       {elem.icon}
                     </a>
@@ -66,7 +52,7 @@ export default function Footer() {
               })}
           </div>
         </section>
-        <section className="website-rights flex justify-center">
+        <section className="website-rights flex-center">
           <small>Copyright &copy; 2021</small>
         </section>
       </Container>

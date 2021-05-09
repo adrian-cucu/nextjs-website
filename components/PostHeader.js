@@ -11,19 +11,19 @@ export default function PostHeader({ title, coverImage, date, author, tags }) {
             <img src={urlForImage(coverImage).url()} />
           </div>
         )}
-        <div className="post-author">
+        <div className="post-author flex">
           {/* {author.picture && (
             <Avatar name={author.name} picture={author.picture} />
           )} */}
           <div className="post-author-wrap">
             <h4>{author.name}</h4>
-            <div className="post-date">
+            <div className="post-date flex jc-center">
               <time dateTime={date}>{parseDate(date)}</time>
             </div>
           </div>
         </div>
         {tags && (
-          <div className="post-tags">
+          <div className="post-tags flex-wrap-center">
             {tags &&
               tags.map((tag, idx) => {
                 return <h6 key={idx}>{tag.title}</h6>

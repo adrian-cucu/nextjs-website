@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/style.css'
 import '../styles/Navbar.css'
 import '../styles/Container.css'
 import '../styles/Post.css'
