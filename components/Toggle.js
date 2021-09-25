@@ -28,7 +28,6 @@ export default function Toggle() {
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: 'var(--bg-color-light-medium)',
-    overflow: 'hidden',
     outline: 'none',
     border: 'none',
     borderRadius: '2rem',
@@ -49,6 +48,7 @@ export default function Toggle() {
     top: 0,
     left: 0,
     backgroundColor: 'var(--navbar-color)',
+    boxShadow: '3px 3px 2px rgba(0, 0, 0, 0.2)',
     width: '50%',
     height: '100%',
   }
@@ -74,7 +74,8 @@ export default function Toggle() {
           className="current-theme-switch"
           style={{
             ...currentThemeSwitch,
-            left: theme === 'light' ? 'calc(50%)' : 0,
+            left: theme === 'light' ? 'calc(55%)' : -5,
+            borderRadius: theme === 'light' ? '0 2rem 2rem 0' : '2rem 0 0 2rem'
           }}
         ></div>
       </button>
