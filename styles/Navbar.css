@@ -147,6 +147,7 @@
     background: var(--navbar-color);
     flex-direction: column;
     position: fixed;
+    align-items: center;
     top: 70px;
     left: 0;
     right: 0;
@@ -161,13 +162,15 @@
 
   .nav-menu.active {
     height: 100%;
-    padding: 1rem 0;
+    padding-top: 2rem;
   }
 
   .nav-menu ul {
     display: flex;
     flex-direction: column;
     margin: 0;
+    height: 50%;
+    justify-content: space-evenly;
   }
 
   .nav-links {
