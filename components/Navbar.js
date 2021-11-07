@@ -9,12 +9,12 @@ import Container from '../components/Container'
 React.useLayoutEffect = React.useEffect
 
 export default function Navbar() {
-  const [click, setClick] = useState(false)
+  const [navMenuActive, setNavMenuActive] = useState(false)
 
   useLayoutEffect(() => {
     function updateSize() {
       if (window.innerWidth >= 768) {
-        setClick(false)
+        setNavMenuActive(false)
       }
     }
 
@@ -27,12 +27,12 @@ export default function Navbar() {
   }, [])
 
   const handleClick = () => {
-    setClick((prevClick) => !prevClick)
-    document.body.style.overflow = 'hidden'
+    setNavMenuActive((prevNavMenuActive) => !prevNavMenuActive)
+    document.body.style.overflow = navMenuActive ? '' : 'hidden'
   }
 
   const closeMobileMenu = () => {
-    setClick(false)
+    setNavMenuActive(false)
     document.body.style.overflow = ''
   }
 
@@ -52,16 +52,18 @@ export default function Navbar() {
           </div>
 
           <div className="nav-menu-icon" onClick={handleClick}>
-            {click ? <FaTimes /> : <FaBars />}
+            {navMenuActive ? <FaTimes /> : <FaBars />}
           </div>
 
           <div
             id="nav-scrim"
-            className={click ? 'visible' : ''}
+            className={navMenuActive ? 'visible' : ''}
             onClick={closeMobileMenu}
           ></div>
 
-          <div className={click ? 'nav-menu flex active' : 'nav-menu flex'}>
+          <div
+            className={navMenuActive ? 'nav-menu flex active' : 'nav-menu flex'}
+          >
             <ul>
               <li>
                 <Link href="/" as="/" passHref onClick={closeMobileMenu}>
