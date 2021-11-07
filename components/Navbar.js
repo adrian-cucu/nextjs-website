@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <Container>
-        <div className="flex">
+        <div className="navbar-wrapper-flexbox">
           <div className="nav-brand">
             <Link href="/" onClick={closeMobileMenu}>
               <a className="brand flex">
@@ -71,8 +71,8 @@ export default function Navbar() {
               <li>
                 <Link
                   passHref
-                  href="/services"
-                  as="/services"
+                  href="/article"
+                  as="/article"
                   onClick={closeMobileMenu}
                 >
                   <a className="nav-links">Article</a>
