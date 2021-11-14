@@ -151,7 +151,7 @@
     top: 70px;
     left: 0;
     right: 0;
-    height: 0;
+    bottom: calc(100vh - 70px);
     line-height: 0;
     overflow-y: hidden;
     -webkit-transition: all .5s ease-in-out;
@@ -161,15 +161,17 @@
   }
 
   .nav-menu.active {
-    height: 100%;
+    bottom: 0;
     padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    overflow-y: scroll;
   }
 
   .nav-menu ul {
     display: flex;
     flex-direction: column;
     margin: 0;
-    height: 50%;
+    padding-bottom: 2rem;
     justify-content: space-evenly;
   }
 
