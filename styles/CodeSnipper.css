@@ -2,19 +2,19 @@
   display: block;
   overflow-x: auto;
   border-radius: 0.3rem 0 0.3rem 0.3rem;
-  /* box-shadow: 1px 1px 5px rgb(26, 24, 24); */
   border-left: 5px solid #04396e;
   line-height: 1.3;
   padding: 0.5em;
   background: rgb(34, 34, 34);
   color: #ebebeb;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .code-lang {
   float: right;
   overflow: hidden;
-  padding: 0.3em 0.5em;
+  padding: 0.4em 0.8em;
   background: rgb(34, 34, 34);
   border-radius: 0.3em 0.3em 0 0;
   color: var(--font-color-light);
@@ -23,7 +23,21 @@
   vertical-align: middle;
   word-wrap: break-word;
   font-family: unset;
-  font-size: 1.1rem;
+  font-size: 0.85em;
+}
+
+.code-copy-clipboard-btn {
+  transition: background 0.5s ease;
+  background: rgb(34, 34, 34);
+}
+
+.code-copy-clipboard-btn.clicked {
+  background: rgb(15, 15, 15);
+}
+
+.code-copy-clipboard:hover {
+  color: var(--link-color-hover);
+  transform: translateY(-1.3px);
 }
 
 /* Comments */

@@ -18,12 +18,11 @@ const serializer = {
       if (style === 'blockquote') {
         return <BlockQuote quote={props.children.join('')} />
       }
-
       return <p>{React.createElement(style, className, props.children)}</p>
     },
     code: (props) => (
       <CodeSnipper
-        lang={props.node.language}
+        language={props.node.language}
         code={props.node.code}
         theme="sunburst"
       />
