@@ -10,17 +10,17 @@ export default function Footer() {
   const SOCIAL_PAGES = [
     {
       label: 'LinkedIn',
-      linkto: '//www.linkedin.com/in/adrian-c-987267167/',
+      linkto: 'https://www.linkedin.com/in/adrian-c-987267167',
       icon: <FaLinkedin />,
     },
     {
       label: 'Github',
-      linkto: '//www.github.com/adrian-cucu',
+      linkto: 'https://www.github.com/adrian-cucu',
       icon: <FaGithub />,
     },
     {
       label: 'BitBucket',
-      linkto: '//bitbucket.org/AdrianCucu/',
+      linkto: 'https://www.bitbucket.org/AdrianCucu',
       icon: <FaBitbucket />,
     },
   ]
@@ -44,6 +44,7 @@ export default function Footer() {
                       target="_blank"
                       aria-label={elem.label}
                       rel="noopener noreferrer"
+                      passhref={true}
                     >
                       {elem.icon}
                     </a>
