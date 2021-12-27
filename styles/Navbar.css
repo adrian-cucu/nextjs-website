@@ -101,7 +101,7 @@
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity .5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 @media screen and (min-width: 320px) {
@@ -151,20 +151,25 @@
     top: 70px;
     left: 0;
     right: 0;
-    bottom: calc(100vh - 70px);
+    bottom: 0;
     line-height: 0;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
     overflow-y: hidden;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
+    -moz-transition: visibility 0s, opacity 0.5s ease-in-out;
+    -o-transition: visibility 0s, opacity 0.5s ease-in-out;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
   }
 
   .nav-menu.active {
-    bottom: 0;
-    padding-top: 2rem;
-    padding-bottom: 1.5rem;
     overflow-y: scroll;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
   }
 
   .nav-menu ul {
