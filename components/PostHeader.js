@@ -1,5 +1,6 @@
 import Avatar from '../components/Avatar'
 import { urlForImage, parseDate } from '../lib/sanity/util'
+import { FaTags } from 'react-icons/fa'
 
 export default function PostHeader({ title, coverImage, date, author, tags }) {
   return (
@@ -24,6 +25,11 @@ export default function PostHeader({ title, coverImage, date, author, tags }) {
         </div>
         {tags && (
           <div className="post-tags flex-wrap-center">
+            <FaTags
+              color="var(--font-color)"
+              fontSize="1.25em"
+              style={{ marginRight: '0.5rem' }}
+            />
             {tags &&
               tags.map((tag, idx) => {
                 return <h6 key={idx}>{tag.title}</h6>
