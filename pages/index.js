@@ -12,10 +12,6 @@ export default function Home(props) {
     date: post._createdAt,
   }))
 
-  if (!allPosts) {
-    return <ErrorPage statusCode={404} />
-  }
-
   return (
     <Layout>
       <article className="main-article">
